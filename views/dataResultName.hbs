@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+   <h1>Product Details</h1>
+    {{#each data}}
+    <div>
+        
+        <h2>{{this.title}}</h2>
+        <p>ASIN: {{this.asin}}</p>
+        <p>Category: {{this.categoryName}}</p>
+        <p>Price: ${{this.price}}</p>
+        <p>Stars: {{this.stars}}</p>
+    </div>
+    {{/each}}
+</body>
+</html>

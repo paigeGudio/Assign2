@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-spacing: 0;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f8f8;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        th:first-child, td:first-child {
+            padding-left: 20px;
+        }
+
+        th:last-child, td:last-child {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Product Details</h1>
+   <table>
+        <tr>
+            <th>Title</th>
+            <th>ASIN</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stars</th>
+            <th>Reviews</th>
+            <th>Is Best Seller</th>
+            <th>Bought in Last Month</th>
+        </tr>
+        {{#each data}}
+        {{#if this.reviews}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.asin}}</td>
+            <td>{{this.categoryName}}</td>
+            <td>${{this.price}}</td>
+            <td>{{this.stars}}</td>
+            <td>{{this.reviews}}</td>
+            <td>{{this.isBestSeller}}</td>
+            <td>{{this.boughtInLastMonth}}</td>
+        </tr>{{else}}
+        <tr class="star">
+            <td>{{this.title}}</td>
+            <td>{{this.asin}}</td>
+            <td>{{this.categoryName}}</td>
+            <td>${{this.price}}</td>
+            <td>{{this.stars}}</td>
+            <td>{{this.reviews}}</td>
+            <td>{{this.isBestSeller}}</td>
+            <td>{{this.boughtInLastMonth}}</td>
+        </tr>
+        {{/if}}
+        {{/each}}
+    </table>
+</body>
+</html>

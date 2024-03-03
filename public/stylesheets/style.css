@@ -1,0 +1,36 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: center;
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border: 5px;
+      border-color: white;
+      border-style: double;
+      font-weight: bold;
+      font-size: 50px;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border: 5px;
+      border-color: white;
+      border-style: double;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .message {
+      color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .star{
+      background-color:orange;
+    }
+    
+  }
